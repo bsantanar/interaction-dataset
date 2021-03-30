@@ -1,0 +1,22 @@
+{
+    "title": "TITULO",
+    "subtitle": "Haptic device that provides vibrotactile feedback",
+    "description": "OpenGlove offers a flexible design, which allows developers and users to rearrange the placement of vibration motors in different areas of the hand depending on their particular needs. OpenGlove is a useful resource to enhance immersion in virtual reality and natural interfaces applications. In this site we provide the design and construction guidelines of the hardware. We also provide the basic software tools in order to help you in the construction of your own implementations of OpenGlove and software that uses this device.",
+    "mission": "Misión",
+    "missionDescription": "Our mission is very important",
+    "objective": "Objetivo",
+    "objectiveDescription": "Our objective is very important",
+    "purpose": "Propósito",
+    "purposeDescription": "Our purpose is very important",
+    "home": "Home",
+    "datasets": "Datasets",
+    "contact": "Contacto",
+    "learn": "Learn More",
+    "descriptionDataset": "Description",
+    "downloadDataset": "Download",
+    "publicationsDataset": "Publications",
+    "requestDataset": "Request Dataset",
+    "error": "We're sorry, we're not able to retrieve this information at the moment, please try back later",
+    "filter": "Filter by year",
+    "contactDescription": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas quae nulla, quod autem hic dolorem est sunt aliquid quas animi similique nesciunt, nobis quis officia numquam eveniet quasi fugit quam."
+}
