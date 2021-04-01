@@ -14,7 +14,7 @@
           alt="Vuetify Logo"
           class="shrink mr-2"
           contain
-          src="@/assets/logo.png"
+          :src="require(`./assets/${info.logo}`)"
           transition="scale-transition"
           width="40"
         />
@@ -134,6 +134,7 @@
 
 <script>
 import Footer from "./components/Footer";
+import info from "./assets/info.json";
 export default {
   name: 'App',
   components: {
@@ -146,6 +147,7 @@ export default {
     languages: [],
     drawer: false,
     group: null,
+    info
     //
   }),
   mounted() {
