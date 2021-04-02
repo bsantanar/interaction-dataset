@@ -147,7 +147,7 @@
                         text
                         :disabled="!valid"
                         :loading="loading"
-                        @click="submit()"
+                        @click="submit(card)"
                     >
                         Send
                     </v-btn>
@@ -187,12 +187,18 @@ export default {
         ],
     }),
     methods: {
-        submit(){
+        submit(dataset){
             this.loading = true
             let {fullName, description, email} = this
             axios
                 .post(`${process.env.VUE_APP_API_URL}/request-dataset/`,
-                    {fullName, description, email}
+                    {
+                      fullName, 
+                      description, 
+                      email,
+                      datasetName: dataset.name,
+                      datasetVersion: dataset.version
+                    }
                 )
                 .finally(() => {
                     this.loading = false
