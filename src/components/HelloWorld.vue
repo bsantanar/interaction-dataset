@@ -51,7 +51,7 @@
     </v-row>
     <v-row class="text-center">
       <v-col>
-        <v-hover v-slot="{ hover }">
+        <!-- <v-hover v-slot="{ hover }"> -->
           <v-card
             class="mx-auto"
             color="grey lighten-4"
@@ -61,7 +61,7 @@
               :aspect-ratio="16/9"
               :src="require(`../assets/${info.mission}`)"
             >
-              <v-expand-transition>
+              <!-- <v-expand-transition>
                 <div
                   v-if="hover"
                   class="d-flex transition-fast-in-fast-out primary darken-2 v-card--reveal display-3 white--text"
@@ -69,24 +69,34 @@
                 >
                   {{getText('missionDescription')}}
                 </div>
-              </v-expand-transition>
+              </v-expand-transition> -->
             </v-img>
             <v-card-text
               class="pt-6"
-              style="position: relative;"
+              style="position: relative; cursor: pointer;"
+              @click="revealMission = !revealMission"
             >
-              <!-- <div class="font-weight-light grey--text title mb-2">
-                For the perfect meal
-              </div> -->
               <h3 class="display-1 font-weight-bold primary--text mb-2">
                 {{getText('mission')}}
               </h3>
             </v-card-text>
+            <v-expand-transition>
+              <v-card
+                v-if="revealMission"
+                class="transition-fast-in-fast-out v-card--reveal-expand"
+                style="height: 100%;"
+              >
+                <v-card-text class="subtitle-1 text-subtitle-1 black--text pb-2">
+                  <p>{{getText('missionDescription')}}</p>
+                </v-card-text>
+              </v-card>
+            </v-expand-transition>
           </v-card>
-        </v-hover>
+        <!-- </v-hover> -->
       </v-col>
+      
       <v-col>
-        <v-hover v-slot="{ hover }">
+        <!-- <v-hover v-slot="{ hover }"> -->
           <v-card
             class="mx-auto"
             color="grey lighten-4"
@@ -96,32 +106,41 @@
               :aspect-ratio="16/9"
               :src="require(`../assets/${info.objective}`)"
             >
-              <v-expand-transition>
+              <!-- <v-expand-transition>
                 <div
                   v-if="hover"
                   class="d-flex transition-fast-in-fast-out primary darken-2 v-card--reveal display-3 white--text"
                   style="height: 100%;"
                 >
-                  {{getText('objectiveDescription')}}
+                  {{getText('missionDescription')}}
                 </div>
-              </v-expand-transition>
+              </v-expand-transition> -->
             </v-img>
             <v-card-text
               class="pt-6"
-              style="position: relative;"
+              style="position: relative; cursor: pointer;"
+              @click="revealObjective = !revealObjective"
             >
-              <!-- <div class="font-weight-light grey--text title mb-2">
-                For the perfect meal
-              </div> -->
               <h3 class="display-1 font-weight-bold primary--text mb-2">
                 {{getText('objective')}}
               </h3>
             </v-card-text>
+            <v-expand-transition>
+              <v-card
+                v-if="revealObjective"
+                class="transition-fast-in-fast-out v-card--reveal-expand"
+                style="height: 100%;"
+              >
+                <v-card-text class="subtitle-1 text-subtitle-1 black--text pb-2">
+                  <p>{{getText('objectiveDescription')}}</p>
+                </v-card-text>
+              </v-card>
+            </v-expand-transition>
           </v-card>
-        </v-hover>
+        <!-- </v-hover> -->
       </v-col>
       <v-col>
-        <v-hover v-slot="{ hover }">
+        <!-- <v-hover v-slot="{ hover }"> -->
           <v-card
             class="mx-auto"
             color="grey lighten-4"
@@ -131,29 +150,38 @@
               :aspect-ratio="16/9"
               :src="require(`../assets/${info.purpose}`)"
             >
-              <v-expand-transition>
+              <!-- <v-expand-transition>
                 <div
                   v-if="hover"
                   class="d-flex transition-fast-in-fast-out primary darken-2 v-card--reveal display-3 white--text"
                   style="height: 100%;"
                 >
-                  {{getText('purposeDescription')}}
+                  {{getText('missionDescription')}}
                 </div>
-              </v-expand-transition>
+              </v-expand-transition> -->
             </v-img>
             <v-card-text
               class="pt-6"
-              style="position: relative;"
+              style="position: relative; cursor: pointer;"
+              @click="revealPurpose = !revealPurpose"
             >
-              <!-- <div class="font-weight-light grey--text title mb-2">
-                For the perfect meal
-              </div> -->
               <h3 class="display-1 font-weight-bold primary--text mb-2">
                 {{getText('purpose')}}
               </h3>
             </v-card-text>
+            <v-expand-transition>
+              <v-card
+                v-if="revealPurpose"
+                class="transition-fast-in-fast-out v-card--reveal-expand"
+                style="height: 100%;"
+              >
+                <v-card-text class="subtitle-1 text-subtitle-1 black--text pb-2">
+                  <p>{{getText('purposeDescription')}}</p>
+                </v-card-text>
+              </v-card>
+            </v-expand-transition>
           </v-card>
-        </v-hover>
+        <!-- </v-hover> -->
       </v-col>
     </v-row>
     <v-row class="text-center">
@@ -197,7 +225,10 @@ export default {
   name: 'HelloWorld',
   data: () => ({
     items: [],
-    info
+    info,
+    revealMission: false,
+    revealPurpose: false,
+    revealObjective: false
   }),
   mounted() {
     this.items = info.carousel.map(a => {
@@ -222,6 +253,13 @@ export default {
 }
 .v-card {
   transition: opacity .4s ease-in-out;
+}
+
+.v-card--reveal-expand {
+  bottom: 0;
+  opacity: 1 !important;
+  position: absolute;
+  width: 100%;
 }
 
 .v-card:not(.on-hover) .v-img {
