@@ -89,6 +89,15 @@
                 <v-card-text class="subtitle-1 text-subtitle-1 black--text pb-2">
                   <p>{{getText('missionDescription')}}</p>
                 </v-card-text>
+                <v-card-actions class="pt-0">
+                  <v-btn
+                    text
+                    color="teal accent-4"
+                    @click="revealMission = !revealMission"
+                  >
+                    {{getText('close')}}
+                  </v-btn>
+                </v-card-actions>
               </v-card>
             </v-expand-transition>
           </v-card>
@@ -134,6 +143,15 @@
                 <v-card-text class="subtitle-1 text-subtitle-1 black--text pb-2">
                   <p>{{getText('objectiveDescription')}}</p>
                 </v-card-text>
+                <v-card-actions class="pt-0">
+                  <v-btn
+                    text
+                    color="teal accent-4"
+                    @click="revealObjective = !revealObjective"
+                  >
+                    {{getText('close')}}
+                  </v-btn>
+                </v-card-actions>
               </v-card>
             </v-expand-transition>
           </v-card>
@@ -178,6 +196,15 @@
                 <v-card-text class="subtitle-1 text-subtitle-1 black--text pb-2">
                   <p>{{getText('purposeDescription')}}</p>
                 </v-card-text>
+                <v-card-actions class="pt-0">
+                  <v-btn
+                    text
+                    color="teal accent-4"
+                    @click="revealPurpose = !revealPurpose"
+                  >
+                    {{getText('close')}}
+                  </v-btn>
+                </v-card-actions>
               </v-card>
             </v-expand-transition>
           </v-card>
