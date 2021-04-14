@@ -328,9 +328,10 @@ export default {
 }
 
 .v-card--reveal-expand {
-  bottom: 0;
+  margin-bottom: 10px;
+  /* bottom: 0;
   opacity: 1 !important;
-  position: absolute;
+  position: absolute; */
   width: 100%;
 }
 
