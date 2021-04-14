@@ -80,7 +80,7 @@
                 {{getText('mission')}}
               </h3>
             </v-card-text>
-            <v-expand-transition>
+            <!-- <v-expand-transition>
               <v-card
                 v-if="revealMission"
                 class="transition-fast-in-fast-out v-card--reveal-expand"
@@ -99,7 +99,7 @@
                   </v-btn>
                 </v-card-actions>
               </v-card>
-            </v-expand-transition>
+            </v-expand-transition> -->
           </v-card>
         <!-- </v-hover> -->
       </v-col>
@@ -134,7 +134,7 @@
                 {{getText('objective')}}
               </h3>
             </v-card-text>
-            <v-expand-transition>
+            <!-- <v-expand-transition>
               <v-card
                 v-if="revealObjective"
                 class="transition-fast-in-fast-out v-card--reveal-expand"
@@ -153,7 +153,7 @@
                   </v-btn>
                 </v-card-actions>
               </v-card>
-            </v-expand-transition>
+            </v-expand-transition> -->
           </v-card>
         <!-- </v-hover> -->
       </v-col>
@@ -187,7 +187,7 @@
                 {{getText('purpose')}}
               </h3>
             </v-card-text>
-            <v-expand-transition>
+            <!-- <v-expand-transition>
               <v-card
                 v-if="revealPurpose"
                 class="transition-fast-in-fast-out v-card--reveal-expand"
@@ -206,10 +206,55 @@
                   </v-btn>
                 </v-card-actions>
               </v-card>
-            </v-expand-transition>
+            </v-expand-transition> -->
           </v-card>
         <!-- </v-hover> -->
       </v-col>
+    </v-row>
+    <v-row class="text-center">
+      <v-card
+        v-if="revealMission"
+        class="transition-fast-in-fast-out v-card--reveal-expand"
+      >
+        <v-card-text>
+          <p class="display-1 text--primary">
+            {{getText('mission')}}
+          </p>
+          <div class="text--primary">
+            {{getText('missionDescription')}}
+          </div>
+        </v-card-text>
+      </v-card>
+    </v-row>
+    <v-row class="text-center">
+      <v-card
+        v-if="revealObjective"
+        class="transition-fast-in-fast-out v-card--reveal-expand"
+      >
+        <v-card-text>
+          <p class="display-1 text--primary">
+            {{getText('objective')}}
+          </p>
+          <div class="text--primary">
+            {{getText('objectiveDescription')}}
+          </div>
+        </v-card-text>
+      </v-card>
+    </v-row>
+    <v-row class="text-center">
+      <v-card
+        v-if="revealPurpose"
+        class="transition-fast-in-fast-out v-card--reveal-expand"
+      >
+        <v-card-text>
+          <p class="display-1 text--primary">
+            {{getText('purpose')}}
+          </p>
+          <div class="text--primary">
+            {{getText('purposeDescription')}}
+          </div>
+        </v-card-text>
+      </v-card>
     </v-row>
     <v-row class="text-center">
       <v-col
