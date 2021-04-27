@@ -4,6 +4,7 @@
             {{this.$parent.$parent.$parent.language.contact}}
         </h1>
         <v-sheet
+            class="mt-3"
             elevation="1"
             rounded="lg"
         >

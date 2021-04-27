@@ -1,9 +1,13 @@
 .DS_Store
 node_modules
 /dist
+/public
 package-lock.json
 vue.config.js
 ecosystem.config.js
+/src/assets
+/src/assets/languages
+/src/plugins
 
 
 # local env files
