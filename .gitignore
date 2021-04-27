@@ -1,7 +1,7 @@
 .DS_Store
 node_modules
 /dist
-/public
+/public/favicon.ico
 package-lock.json
 vue.config.js
 ecosystem.config.js
