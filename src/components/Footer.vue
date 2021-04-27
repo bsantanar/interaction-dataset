@@ -12,6 +12,7 @@
           :key="icon.type"
           class="mx-4 white--text"
           :href="icon.link"
+          target="_blank"
           icon
         >
           <v-icon size="24px">
@@ -39,6 +40,7 @@ export default {
           {type: 'mdi-twitter', link: info.twitter},
           {type: 'mdi-linkedin', link: info.linkedin},
           {type: 'mdi-instagram', link: info.instagram},
+          {type: 'mdi-youtube', link: info.youtube}
       ],
     }),    
 }

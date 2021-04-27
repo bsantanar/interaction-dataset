@@ -1,29 +1,28 @@
 <template>
   <v-container style="max-width: 1200px;">
     <v-row class="text-center">
-      <v-hover v-slot="{ hover }">
             <v-card
-              :elevation="hover ? 12 : 2"
-              :class="{ 'on-hover': hover }"
+              elevation="12"
             >
               <v-img
                 :src="require(`../assets/${info.header}`)"
                 max-height="400"
+                min-width="100%"
               >
-                <v-expand-transition>
-                  <div
-                    v-if="!hover"
-                    class="d-flex transition-fast-in-fast-out primary darken-2 v-card--reveal display-3 white--text"
-                    style="height: 100%;"
-                  >
-                    {{getText('title')}}
-                  </div>
-                </v-expand-transition>
               </v-img>
             </v-card>
-          </v-hover>
     </v-row>
     <v-row>
+      <v-col class="text-center mt-5">
+
+      <h1>{{getText('welcomeText')}}</h1>
+
+      <v-divider light></v-divider>
+      </v-col>
+
+    </v-row>
+    <v-row>
+
       <v-col
           cols="12"
           sm="8"
@@ -49,9 +48,17 @@
         ></v-img>
       </v-col>
     </v-row>
+    <v-row>
+      <v-col class="text-center mt-5">
+
+      <h1>{{getText('objectivesText')}}</h1>
+
+      <v-divider light></v-divider>
+      </v-col>
+
+    </v-row>
     <v-row class="text-center">
-      <v-col>
-        <!-- <v-hover v-slot="{ hover }"> -->
+      <v-col cols="12" sm="4">
           <v-card
             class="mx-auto"
             color="grey lighten-4"
@@ -61,15 +68,6 @@
               :aspect-ratio="16/9"
               :src="require(`../assets/${info.mission}`)"
             >
-              <!-- <v-expand-transition>
-                <div
-                  v-if="hover"
-                  class="d-flex transition-fast-in-fast-out primary darken-2 v-card--reveal display-3 white--text"
-                  style="height: 100%;"
-                >
-                  {{getText('missionDescription')}}
-                </div>
-              </v-expand-transition> -->
             </v-img>
             <v-card-text
               class="pt-6"
@@ -80,32 +78,10 @@
                 {{getText('mission')}}
               </h3>
             </v-card-text>
-            <!-- <v-expand-transition>
-              <v-card
-                v-if="revealMission"
-                class="transition-fast-in-fast-out v-card--reveal-expand"
-                style="height: 100%;"
-              >
-                <v-card-text class="subtitle-1 text-subtitle-1 black--text pb-2">
-                  <p>{{getText('missionDescription')}}</p>
-                </v-card-text>
-                <v-card-actions class="pt-0">
-                  <v-btn
-                    text
-                    color="teal accent-4"
-                    @click="revealMission = !revealMission"
-                  >
-                    {{getText('close')}}
-                  </v-btn>
-                </v-card-actions>
-              </v-card>
-            </v-expand-transition> -->
           </v-card>
-        <!-- </v-hover> -->
       </v-col>
       
-      <v-col>
-        <!-- <v-hover v-slot="{ hover }"> -->
+      <v-col cols="12" sm="4">
           <v-card
             class="mx-auto"
             color="grey lighten-4"
@@ -115,15 +91,6 @@
               :aspect-ratio="16/9"
               :src="require(`../assets/${info.objective}`)"
             >
-              <!-- <v-expand-transition>
-                <div
-                  v-if="hover"
-                  class="d-flex transition-fast-in-fast-out primary darken-2 v-card--reveal display-3 white--text"
-                  style="height: 100%;"
-                >
-                  {{getText('missionDescription')}}
-                </div>
-              </v-expand-transition> -->
             </v-img>
             <v-card-text
               class="pt-6"
@@ -134,31 +101,9 @@
                 {{getText('objective')}}
               </h3>
             </v-card-text>
-            <!-- <v-expand-transition>
-              <v-card
-                v-if="revealObjective"
-                class="transition-fast-in-fast-out v-card--reveal-expand"
-                style="height: 100%;"
-              >
-                <v-card-text class="subtitle-1 text-subtitle-1 black--text pb-2">
-                  <p>{{getText('objectiveDescription')}}</p>
-                </v-card-text>
-                <v-card-actions class="pt-0">
-                  <v-btn
-                    text
-                    color="teal accent-4"
-                    @click="revealObjective = !revealObjective"
-                  >
-                    {{getText('close')}}
-                  </v-btn>
-                </v-card-actions>
-              </v-card>
-            </v-expand-transition> -->
           </v-card>
-        <!-- </v-hover> -->
       </v-col>
-      <v-col>
-        <!-- <v-hover v-slot="{ hover }"> -->
+      <v-col cols="12" sm="4">
           <v-card
             class="mx-auto"
             color="grey lighten-4"
@@ -168,15 +113,6 @@
               :aspect-ratio="16/9"
               :src="require(`../assets/${info.purpose}`)"
             >
-              <!-- <v-expand-transition>
-                <div
-                  v-if="hover"
-                  class="d-flex transition-fast-in-fast-out primary darken-2 v-card--reveal display-3 white--text"
-                  style="height: 100%;"
-                >
-                  {{getText('missionDescription')}}
-                </div>
-              </v-expand-transition> -->
             </v-img>
             <v-card-text
               class="pt-6"
@@ -187,28 +123,7 @@
                 {{getText('purpose')}}
               </h3>
             </v-card-text>
-            <!-- <v-expand-transition>
-              <v-card
-                v-if="revealPurpose"
-                class="transition-fast-in-fast-out v-card--reveal-expand"
-                style="height: 100%;"
-              >
-                <v-card-text class="subtitle-1 text-subtitle-1 black--text pb-2">
-                  <p>{{getText('purposeDescription')}}</p>
-                </v-card-text>
-                <v-card-actions class="pt-0">
-                  <v-btn
-                    text
-                    color="teal accent-4"
-                    @click="revealPurpose = !revealPurpose"
-                  >
-                    {{getText('close')}}
-                  </v-btn>
-                </v-card-actions>
-              </v-card>
-            </v-expand-transition> -->
           </v-card>
-        <!-- </v-hover> -->
       </v-col>
     </v-row>
     <v-row class="text-center">
@@ -256,6 +171,15 @@
         </v-card-text>
       </v-card>
     </v-row>
+    <v-row>
+      <v-col class="text-center mt-5">
+
+      <h1>{{getText('carouselText')}}</h1>
+
+      <v-divider light></v-divider>
+      </v-col>
+
+    </v-row>
     <v-row class="text-center">
       <v-col
           cols="12"
@@ -275,18 +199,25 @@
           </v-carousel>
         </v-sheet>
       </v-col>
-      <!-- <v-col
-          cols="12"
-          sm="12"
-          lg="4"
-      >
-        <v-sheet
-          rounded="lg"
-          elevation="1"
+    </v-row>
+    <v-row>
+      <v-col offset="4" cols="12" sm="3">
+        <v-img
+          :src="require(`../assets/${info.logoUsach}`)"
+          max-height="100px"
+          max-width="200px"
         >
-          <h1>SOCIAL MEDIA</h1>
-        </v-sheet>
-      </v-col> -->
+
+        </v-img>
+      </v-col>
+      <v-col offset-sm="0" offset="4" cols="12" sm="3">
+        <v-img
+          :src="require(`../assets/${info.logoDiinf}`)"
+          max-height="100px"
+          max-width="100px"
+        >
+        </v-img>
+      </v-col>
     </v-row>
   </v-container>
 </template>
