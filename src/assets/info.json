@@ -1,0 +1,19 @@
+{
+    "location": "Universidad de Santiago de Chile",
+    "phone": "+56 9 1234 56789",
+    "mail": "neurone@usach.cl",
+    "facebook": "https://interaction.informatica.usach.cl/",
+    "twitter": "",
+    "linkedin": "",
+    "instagram": "",
+    "youtube": "",
+    "purpose": "purpose.png",
+    "mission": "mission.png",
+    "objective": "objective.jpg",
+    "about": "about.jpg",
+    "header": "header.jpg",
+    "logo": "logo.png",
+    "logoDiinf": "logo_diinf.png",
+    "logoUsach": "logo_usach.png",
+    "carousel": ["guante-5.jpg", "guante-7.jpg", "guante-8.jpg"]
+}
